@@ -1,14 +1,14 @@
 'use strict';
 
-var gulp         = require('gulp');
-var autoprefixer = require('gulp-autoprefixer');
-var concat       = require('gulp-concat');
-var less         = require('gulp-less');
-var path         = require('path');
-var watch        = require('gulp-watch');
-var browserSync  = require('browser-sync');
-var reload       = browserSync.reload;
-var rigger       = require('gulp-rigger');
+var gulp         = require('gulp'),
+    autoprefixer = require('gulp-autoprefixer'),
+    concat       = require('gulp-concat'),
+    less         = require('gulp-less'),
+    path         = require('path'),
+    watch        = require('gulp-watch'),
+    browserSync  = require('browser-sync'),
+    reload       = browserSync.reload,
+    rigger       = require('gulp-rigger');
 
 
 gulp.task('html', function () {
@@ -39,19 +39,19 @@ gulp.task('js', function () {
 		.pipe(reload({stream: true}));
 });
 
-/*
-gulp.task('pics', function () {
-	return gulp.src('src/img/*')
+
+gulp.task('img', function () {
+	return gulp.src(['src/img/files/*', 'src/img/i/*'], { base: 'src/img' })
 		.pipe(gulp.dest('dist/img'))
 		.pipe(reload({stream: true}));
 });
-*/
+
 
 gulp.task('watch', function(){
-    watch(['src/styles/*/*.less'], function(event, cb) {
-        gulp.start('css');
+    watch(['src/styles/*/*.less', 'src/styles/*.less'], function(event, cb) {
+        gulp.start(['css', 'js']);
     });
-    watch(['src/html/*/*.html'], function(event, cb) {
+    watch(['src/html/*/*.html', 'src/html/*.html'], function(event, cb) {
         gulp.start('html');
     });
     watch(['src/js/*.js'], function(event, cb) {
@@ -74,4 +74,4 @@ gulp.task('server', function () {
     browserSync(config);
 });
 
-gulp.task('default', ['html', 'css', 'js', 'server','watch']);
+gulp.task('default', ['html', 'css', 'img', 'js', 'server', 'watch']);
