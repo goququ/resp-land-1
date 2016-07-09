@@ -8,6 +8,7 @@
     "gulp-rigger": "^0.5.8",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-watch": "^4.3.5",
-    "lesshat": "^4.0.1"
+    "lesshat": "^4.0.1",
+    "normalize.css": "^4.2.0"
   }
 }
