@@ -1,1 +1,162 @@
 /*** TEXT.LESS ***/
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic';
+
+@font-face {
+    font-family: inglobal; /* Имя шрифта */
+    src: url(../fonts/inglobalbi.ttf); /* Путь к файлу со шрифтом */
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*header-text*/
+
+.header-menu-item-text{
+    line-height: 48px;
+    font-family: inglobal;
+    color: @color-gray;
+}
+
+
+.sec-1-title{
+    color: white;
+    font-family: inglobal;
+}
+.border-text{
+    font-family: inglobal;
+    line-height: 18px;
+    font-size: 18px;
+}
+
+.promo-wrap{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+.promo-title{
+    font-family: inglobal;
+    font-weight: 600;
+    font-size: 20px;
+}
+.promo-text{
+    line-height: 1.5em;
+    font-size: 16px;
+}
+
+
+.form-phone{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 900;
+    font-size: 26px;
+    color: @color-blue;
+}
+
+.sec-3-title{
+    font-family: inglobal;
+    font-size: 34px;
+}
+
+.sec-3-form-title{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 42px;
+}
+.sec-3-form-text{
+    font-family: 'Open Sans', sans-serif;
+    // font-weight: 400;
+    font-size: 22px;
+    
+    .m--big{
+        color: @color-red;
+        font-size: 26px;
+        font-weight: 900;
+    }
+}
+
+.list-item{
+    font-weight: 900;
+}
+
+.phone-text{
+    color: white;
+    font-size: 26px;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 0px 1px 0 (@color-blue - #222),
+                 0px 2px 0 (@color-blue - #222),
+                 0px 3px 0 (@color-blue - #222);
+}
+
+.phone-number{
+    color: white;
+    font-size: 40px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic; 
+    font-weight: 900;
+    text-shadow: 0px 1px 0 (@color-blue - #222),
+                 0px 2px 0 (@color-blue - #222),
+                 0px 3px 0 (@color-blue - #222);
+}
+
+
+.contacts-text{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 16px;
+}
+.contacts-title{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.page-footer{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+/*Desctop*/
+@media (min-width: 601px){
+    
+    .sec-1-title{
+        font-size: 38px;
+    }
+    
+    .promo-wrap{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+    }
+    .promo-title{
+        font-family: inglobal;
+        font-weight: 600;
+        font-size: 36px;
+    }
+    
+    .phone-text{
+        font-size: 16px;
+    }
+    
+    .phone-number{
+        font-size: 34px;
+    }
+}
+/*Mobile*/
+@media (max-width: 600px){
+    
+    .sec-1-title{
+        font-size: 22px;
+    }
+    
+    .promo-wrap{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+    }
+    .promo-title{
+        font-family: inglobal;
+        font-weight: 600;
+        font-size: 36px;
+    }
+    
+}
+

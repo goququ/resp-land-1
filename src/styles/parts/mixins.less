@@ -1,1 +1,122 @@
 /*** MIXINS.LESS ***/
+
+// Подсветка
+
+.mix(@color){
+    outline: 1px solid @color;
+}
+
+// Section layout
+
+.mix_sec-layout(){
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+
+// clearfix
+
+.mix_clearfix(){
+    &:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+// mobile menu icons
+.mix-mobile-menu-icons(@background){
+
+    &::after{
+        content: '';
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin: 0 auto;
+        background: @background;
+        background-size: 210%;
+    }
+}
+
+// Рамка для текста
+
+.mix_font-border(){
+    
+    text-shadow: -2px -2px 0 #000,
+                -1px -2px 0 #000,
+                -2px -1px 0 #000,
+                -1px -1px 0 #000,
+                0px -1px 0 #000,
+                -1px -0px 0 #000,
+                0px 0px 0 #000,
+                1px 0px 0 #000,
+                0px 1px 0 #000,
+                1px 1px 0 #000,
+                2px 1px 0 #000,
+                1px 2px 0 #000,
+                2px 2px 0 #000,
+                3px 2px 0 #000,
+                2px 3px 0 #000,
+                3px 3px 0 #000;
+}
+
+.mix_input-text(){
+    width: 100%;
+    height: 40px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: inset 0px 3px 10px #aaa;
+    text-indent: 20px;
+    font-size: 12px;
+}
+
+.mix_input-submit(){
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    background: @color-blue;
+    color: white;
+    border: none;
+    border-bottom: 2px solid (@color-blue - 111111);
+}
+
+.mix_dots(){
+    content: '';
+    display: block;
+    width:30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    
+}
+
+.mix_list-dots-left(@background: @color-gray){
+    
+    &::before{
+        .mix_dots;
+        background: @background;
+        left: 0;
+    }
+}
+
+.mix_list-dots-right(@background: @color-gray){
+    
+    &::after{
+        .mix_dots;
+        background: @background;
+        right: 0;
+    }
+}
+
+// префиксы
+/*
+
+-o-
+-moz-
+-webkit-
+
+*/
